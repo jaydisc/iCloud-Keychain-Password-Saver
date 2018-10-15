@@ -6,7 +6,7 @@ A simple, one-file PHP website for storing arbitrary passwords in iCloud Keychai
 
 iCloud Keychain seems limited to storing passwords for websites. So, if you want to store a password that isn't for a website, but you want to access this password on any of your iCloud devices, this gives you an easy-to-use solution that lets you save such a password, by saving it against a hostname which includes your chosen keyword, so you can easily look it up later via that keyword.
 
-## Example Use
+## Use
 
 Let's say I want to store the password for my journal. I visit my instance of this site at *passwords.practiceofcode.com*. When I get there, I enter the keyword, *"journal"*. I am then redirected to *journal.passwords.practiceofcode.com*. When I get there, I enter the password for my journal, and submit.
 

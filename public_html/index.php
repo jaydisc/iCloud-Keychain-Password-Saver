@@ -2,6 +2,7 @@
 // Set the parent domain
 $parent_domain = 'passwords.practiceofcode.com';
 
+// If a keyword has just been submitted, let's redirect to a subdomain including that keyword.
 if (isset($_POST['keyword']))
 {
 	// If a keyword has been submitted, redirect to it.
@@ -17,13 +18,16 @@ if (isset($_POST['keyword']))
 }
 elseif (!empty($_POST['password']))
 {
-	// If a password has been submitted, redirect back to the same location (to avoid refresh/resend form alerts)
+	// If a password has been submitted, redirect back to the same subdomain.
+	// Safari should have already saved the password.
+	// This just prepares the form for another submit, or a change of keyword.
 	header('Location: /');
 	exit();
 }
 
-// Has a keyword been set?
-$keyword = FALSE;
+// If we've made it this far, this is just a normal page load (not a submit)
+// Are we at a subdomain that includes a keyword? If so, set it.
+$keyword = NULL;
 if (strpos($_SERVER['SERVER_NAME'], $parent_domain) >= 2)
 {
 	$keyword = str_replace('.' . $parent_domain, '', $_SERVER['SERVER_NAME']);

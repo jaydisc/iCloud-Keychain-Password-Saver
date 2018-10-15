@@ -1,4 +1,4 @@
-# iCloud-Keychain-Password-Saver
+# iCloud Keychain Password Saver
 
 A simple, one-file PHP website for storing arbitrary passwords in iCloud Keychain against a keyword.
 
@@ -12,10 +12,10 @@ You need to configure the DNS and Virtual Host config for a hostname of your cho
 
 ## Use
 
-When you first load the site at the parent domain, you will be asked to choose a keyword. Upon doing so, you will be redirected to [the-keyword-you-chose].your-hostname.com, which should just reload the same PHP file. This time, the keyword will be in the URL, and you can now store a password, and optionally a username, and these will be saved in iCloud Keychain with the current URL (which includes your keyword). Then, you can either store additional passwords for that hostname, or choose another keyword and repeat the process.
+When you first load the site at the parent domain, you will be asked to choose a keyword. Upon doing so, you will be redirected to *[the-keyword-you-chose].your-hostname.com*, which should just reload the same PHP file. This time, the keyword will be in the URL, and you can now store a password, and optionally a username, and these will be saved in iCloud Keychain with the current URL (which includes your keyword). Then, you can either store additional passwords for that hostname, or choose another keyword and repeat the process.
 
 ## Example
 
-Let's say I want to store the password for my journal. I visit my instance of this site at passwords.practiceofcode.com. When I get there, I enter the keyword, "journal". I am then redirected to journal.passwords.practiceofcode.com. When I get there, I enter the password for my journal, and submit.
+Let's say I want to store the password for my journal. I visit my instance of this site at *passwords.practiceofcode.com*. When I get there, I enter the keyword, *"journal"*. I am then redirected to *journal.passwords.practiceofcode.com*. When I get there, I enter the password for my journal, and submit.
 
-My password is now saved in iCloud keychain with the hostname, "journal.passwords.practiceofcode.com". On my iOS device, if I search for "journal" or ask Siri what my password for "journal" is, this password comes up in the search results.
+My password is now saved in iCloud keychain with the hostname, *"journal.passwords.practiceofcode.com"*. On my iOS device, if I search for *"journal"* or ask Siri what my password for *"journal"* is, this password comes up in the search results.
